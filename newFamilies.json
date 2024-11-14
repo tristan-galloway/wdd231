@@ -1,0 +1,18 @@
+{
+    "familyName": "Galloway",
+    "movedIn": "01/06/2024",
+    "familyCount": 2,
+    "bishopricVisit": false,
+    "familyMembers": [
+        {
+            "name": "Tristan Galloway",
+            "gemder": "male",
+            "birthdate": "01/02/2001"
+        },
+        {
+            "name": "Samantha Galloway",
+            "gemder": "female",
+            "birthdate": "09/21/2001"
+        }
+    ]
+}
