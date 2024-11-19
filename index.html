@@ -18,32 +18,49 @@
 </head>
 <body>
     <header>
-        <img src="images/portrait.jpg" alt="">
+        <img id="portrait" src="images/portrait.jpg" alt="">
         <h1>Tristan A. Galloway</h1>
     </header>
     <nav>
-        <a href="index.html">Home</a>
-        <a href="chamber/index.html">Chamber</a>
-        <a href="https://github.com/tristan-galloway">GitHub Profile</a>
-        <a href="https://www.linkedin.com/in/tristan-a-galloway/">LinkedIn</a>
+        <button id="hamburger" onclick="toggleMenu()">☰</button>
+        <div id="nav-links">
+            <a id="active" href="index.html">Home</a>
+            <a href="chamber/index.html" target="_blank">Chamber</a>
+            <a href="https://github.com/tristan-galloway" target="_blank">GitHub Profile</a>
+            <a href="https://www.linkedin.com/in/tristan-a-galloway/" target="_blank">LinkedIn</a>
+        </div>
     </nav>
     <main>
         <section id="course-work">
             <h2>Course Work</h2>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </section>
         <section id="home-city">
             <h2>Pocatello, Idaho</h2>
+            <img id="holt-arena" src="images/holt-arena.jpg" alt="holt arena in pocatello, idaho">
+            <p>Holt Arena</p>
         </section>
         <section id="certificate">
             <h2>Web and Computer Programming Certificate</h2>
+            <section id="options">
+                <button id="all-button">All</button>
+                <button id="cse-button">CSE</button>
+                <button id="wdd-button">WDD</button>
+            </section>
+            <!-- This is filled using the getCourses() function -->
+            <section id="courses"></section>
         </section>
     </main>
     <footer>
-        <p class="page_details">
-            <span id="currentyear"></span>
-            Tristan Galloway
-            Idaho
-        </p>
+        <section class="page-details">
+            <span id="currentYear"></span>
+            <p>Tristan Galloway</p>
+            <p>United States of America</p>
+        </section>
         <p id="lastModified"></p>
     </footer>
 </body>
