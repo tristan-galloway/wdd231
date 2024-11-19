@@ -1,58 +1,58 @@
 [
     {
-        "name": "",
-        "address": "",
-        "phoneNumber": 0,
-        "url": "",
-        "imageName": "",
-        "membershipLevel": 0
+        "name": "Timbuktu Traders",
+        "address": "10 Market St, Timbuktu, Mali 999",
+        "phoneNumber": "(223) 555-1234",
+        "url": "http://www.timbuktutraders.com",
+        "imageName": "timbuktu-traders.jpg",
+        "membershipLevel": 3
     },
     {
-        "name": "",
-        "address": "",
-        "phoneNumber": 0,
-        "url": "",
-        "imageName": "",
-        "membershipLevel": 0
+        "name": "Sahara Supplies Co.",
+        "address": "15 Desert Rd, Timbuktu, Mali 999",
+        "phoneNumber": "(223) 555-5678",
+        "url": "http://www.saharasupplies.com",
+        "imageName": "sahara-supplies.jpg",
+        "membershipLevel": 2
     },
     {
-        "name": "",
-        "address": "",
-        "phoneNumber": 0,
-        "url": "",
-        "imageName": "",
-        "membershipLevel": 0
+        "name": "Timbuktu Travel Agency",
+        "address": "5 Adventure Ave, Timbuktu, Mali 999",
+        "phoneNumber": "(223) 555-2468",
+        "url": "http://www.timbuktutravel.com",
+        "imageName": "timbuktu-travel.jpg",
+        "membershipLevel": 3
     },
     {
-        "name": "",
-        "address": "",
-        "phoneNumber": 0,
-        "url": "",
-        "imageName": "",
-        "membershipLevel": 0
+        "name": "Mali Handicrafts",
+        "address": "8 Artisan Lane, Timbuktu, Mali 999",
+        "phoneNumber": "(223) 555-7890",
+        "url": "http://www.malihandicrafts.com",
+        "imageName": "mali-handicrafts.jpg",
+        "membershipLevel": 1
     },
     {
-        "name": "",
-        "address": "",
-        "phoneNumber": 0,
-        "url": "",
-        "imageName": "",
-        "membershipLevel": 0
+        "name": "Nomad's Coffee House",
+        "address": "3 Camel Rd, Timbuktu, Mali 999",
+        "phoneNumber": "(223) 555-1122",
+        "url": "http://www.nomadscoffee.com",
+        "imageName": "nomads-coffee.jpg",
+        "membershipLevel": 2
     },
     {
-        "name": "",
-        "address": "",
-        "phoneNumber": 0,
-        "url": "",
-        "imageName": "",
-        "membershipLevel": 0
+        "name": "Golden Sands Restaurant",
+        "address": "20 Oasis Blvd, Timbuktu, Mali 999",
+        "phoneNumber": "(223) 555-3344",
+        "url": "http://www.goldensandsrestaurant.com",
+        "imageName": "golden-sands.jpg",
+        "membershipLevel": 1
     },
     {
-        "name": "",
-        "address": "",
-        "phoneNumber": 0,
-        "url": "",
-        "imageName": "",
-        "membershipLevel": 0
+        "name": "Sankore Bookstore",
+        "address": "25 Scholar St, Timbuktu, Mali 999",
+        "phoneNumber": "(223) 555-5566",
+        "url": "http://www.sankorebookstore.com",
+        "imageName": "sankore-books.jpg",
+        "membershipLevel": 3
     }
 ]

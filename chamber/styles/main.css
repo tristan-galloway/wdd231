@@ -1,0 +1,145 @@
+:root {
+    --primary-color: #F78764;
+    --secondary-color: #DA4167;
+    --accent-color: #083D77;
+    --accent-color-2: #F4D35E;
+    --background-color: #EBEBD3;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between; /* Space out logo+headings and navigation */
+    align-items: center; /* Vertically align items */
+    padding: 20px;
+    background-color: var(--primary-color); /* Adjust as needed */
+    font-family: Arial, sans-serif;
+}
+
+header img {
+    width: 60px; /* Set appropriate logo size */
+    height: auto;
+    margin-right: 15px; /* Add spacing between logo and headings */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.438);
+}
+
+header h1, header h2 {
+    margin: 0; /* Remove default margins */
+}
+
+header h1 {
+    font-size: 24px; /* Adjust heading size */
+}
+
+header h2 {
+    font-size: 16px; /* Smaller size for subheading */
+}
+
+header nav {
+    display: flex;
+    gap: 20px; /* Space out navigation links */
+}
+
+header nav a {
+    text-decoration: none; /* Remove underline */
+    color: #000; /* Set link color */
+    font-size: 16px;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+header nav a:hover {
+    color: var(--accent-color); /* Highlight color on hover */
+}
+
+#navbar {
+    display: flex;
+}
+
+#active {
+    border-bottom: 3px solid var(--accent-color); 
+}
+
+/* Hamburger menu for small screens */
+#hamburger-menu {
+    display: none; /* Hidden by default */
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Group the logo and headings */
+.logo-heading-container {
+    display: flex;
+    flex-direction: column; /* Stack h1 over h2 */
+}
+
+.header-left {
+    display: flex;
+    align-items: center; /* Align logo and headings */
+}
+
+
+footer {
+    display: flex;
+    justify-content: space-between; /* Distributes spans evenly */
+    align-items: flex-start; /* Aligns content at the top */
+    padding: 20px;
+    background-color: #F78764; /* Adjust as needed */
+    font-family: Arial, sans-serif;
+}
+
+footer p {
+    margin: 0;
+}
+
+#footer-chamber-info, 
+#footer-student-info {
+    display: flex;
+    flex-direction: column; /* Stack content top to bottom */
+    gap: 5px; /* Adds space between items */
+}
+
+#footer-links {
+    display: flex;
+    justify-content: center; /* Centers icons horizontally */
+    align-items: center; /* Vertically aligns icons */
+    gap: 5px; /* Adds space between the icons */
+}
+
+#footer-links img {
+    width: 80px; /* Set appropriate size for icons */
+}
+
+@media (max-width: 768px) {
+    /* Adjust header layout */
+    header {
+        flex-direction: column; /* Stack header content vertically */
+        align-items: stretch; /* Ensure full width for children */
+    }
+
+    #hamburger-menu {
+        display: block; /* Show hamburger icon */
+        align-self: flex-end; /* Align icon to the right */
+        margin-top: -10px; /* Adjust spacing */
+    }
+
+    nav {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        gap: 10px;
+        background-color: var(--primary-color); /* Match header background */
+        padding: 10px 20px;
+        border-top: 2px solid var(--accent-color); /* Add visual separation */
+    }
+
+    nav a {
+        font-size: 14px; /* Slightly smaller font */
+        text-align: left; /* Align links to the left */
+        padding: 5px 0; /* Add spacing */
+    }
+
+    nav.active {
+        display: flex; /* Show nav below header */
+    }
+}

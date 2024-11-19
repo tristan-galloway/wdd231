@@ -12,53 +12,52 @@
     <meta property="url" content="tbd">
     <title>Timbuktu Chamber of Commerce | Directory</title>
     <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/directory.css">
-    <script src="scripts/directory.js"></script>
+    <script src="scripts/directory.js" defer></script>
     <link rel="shortcut icon" href="images/timbuktu-favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
-        <img src="images/timbuktu-mosque-logo.png" alt="Logo of timbuktu mosque">
-        <h1>Timbuktu</h1>
-        <h2>Chamber of Commerce</h2>
-        <nav>
+        <div class="header-left">
+            <img src="images/timbuktu-mosque-logo.png" alt="Logo of Timbuktu mosque">
+            <div class="logo-heading-container">
+                <h1>Timbuktu</h1>
+                <h2>Chamber of Commerce</h2>
+            </div>
+        </div>
+        <div id="hamburger-menu">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+        <nav id="navbar">
             <a href="index.html">Home</a>
-            <a href="directory.html">Directory</a>
+            <a id="active" href="directory.html">Directory</a>
             <a href="#">Join</a>
             <a href="#">Discover</a>
         </nav>
     </header>
     <body>
-        <div class="business-card-container">
-            <!-- Placeholder card layout -->
-            <div class="business-card">
-                <p class="business-name">Timbuktu Market</p>
-                <img class="business-image" src="#" alt="">
-                <p class="business-address">123 Street Timbuktu, Mali 999</p>
-                <p class="email">timbuktumarket@gmail.com</p>
-                <p class="url">timbuktumarket.com</p>
-            </div>
-        </div>
+        <div class="business-card-container"></div>
     </body>
     <footer>
         <span id="footer-chamber-info">
-            <p>Tibuktu Chamber of Commerce</p>
+            <p><strong>Tibuktu Chamber of Commerce</strong></p>
             <p>10 Rue De La Paix</p>
             <p>Timbuktu, Mali 999</p>
             <p>info@timbuktucc.org</p>
             <p>(223) 555-2300</p>
         </span>
         <span id="footer-links">
-            <a href="https://www.youtube.com/"><img src="images/youtube-icon.png" alt="Youtube logo"></a>
-            <a href="https://x.com/"><img src="images/x-icon.png" alt="X Logo"></a>
-            <a href="https://www.linkedin.com/feed/"><img src="images/linkedin-icon.png" alt="LinkedIn Logo"></a>
+            <a href="https://www.youtube.com/"><img src="images/youtube-icon.png" alt="Youtube logo" target="_blank"></a>
+            <a href="https://x.com/"><img src="images/x-icon-twitter.png" alt="X Logo" target="_blank"></a>
+            <a href="https://www.linkedin.com/feed/"><img src="images/linkedin-icon.png" alt="LinkedIn Logo" target="_blank"></a>
         </span>
         <span id="footer-student-info">
             <p>WDD231 Class Project</p>
             <p>Tristan Galloway</p>
             <!-- place holders for dynamic footer info updated using scripts -->
-            <p id="footer-copyright">&#169 2024 Timbuktu Chamber of Commerce</p>
-            <p id="footer-last-mod">Last Modifcation: 10/21/2024 10:44:32</p>
+            <p id="currentYear"></p>
+            <p id="lastModified"></p>
         </span>
     </footer>
 </body>

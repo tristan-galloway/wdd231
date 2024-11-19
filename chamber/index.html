@@ -3,9 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timbuktu Chamber of Commerce</title>
+    <meta name="title" content="Timbuktu Chamber of Commerce">
+    <meta name="description" content="This website will serve as a resource hub for businesses in the city of Timbuktu. The site will provide information on local events, host networking opportunities, create business directories, and encourage local shopping. It aims to promote local economic growth, support local businesses, and foster a sense of community between the businesses.">
+    <meta name="author" content="Tristan Galloway">
+    <meta property="og:title" content="Timbuktu Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="image" content="tbd">
+    <meta property="url" content="tbd">
+    <title>Timbuktu Chamber of Commerce | Home</title>
+    <link rel="stylesheet" href="../styles/normalize.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/directory.js" defer></script>
+    <link rel="shortcut icon" href="images/timbuktu-favicon.ico" type="image/x-icon">
 </head>
 <body>
-    
+    <header>
+        <div class="header-left">
+            <img src="images/timbuktu-mosque-logo.png" alt="Logo of Timbuktu mosque">
+            <div class="logo-heading-container">
+                <h1>Timbuktu</h1>
+                <h2>Chamber of Commerce</h2>
+            </div>
+        </div>
+        <div class="hamburger-menu" id="hamburger-menu">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+        <nav id="navbar">
+            <a id="active"href="index.html">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="#">Join</a>
+            <a href="#">Discover</a>
+        </nav>
+    </header>
+    <body>
+    </body>
+    <footer>
+        <span id="footer-chamber-info">
+            <p><strong>Tibuktu Chamber of Commerce</strong></p>
+            <p>10 Rue De La Paix</p>
+            <p>Timbuktu, Mali 999</p>
+            <p>info@timbuktucc.org</p>
+            <p>(223) 555-2300</p>
+        </span>
+        <span id="footer-links">
+            <a href="https://www.youtube.com/"><img src="images/youtube-icon.png" alt="Youtube logo" target="_blank"></a>
+            <a href="https://x.com/"><img src="images/x-icon-twitter.png" alt="X Logo" target="_blank"></a>
+            <a href="https://www.linkedin.com/feed/"><img src="images/linkedin-icon.png" alt="LinkedIn Logo" target="_blank"></a>
+        </span>
+        <span id="footer-student-info">
+            <p>WDD231 Class Project</p>
+            <p>Tristan Galloway</p>
+            <!-- place holders for dynamic footer info updated using scripts -->
+            <p id="currentYear"></p>
+            <p id="lastModified"></p>
+        </span>
+    </footer>
 </body>
 </html>
