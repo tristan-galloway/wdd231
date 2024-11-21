@@ -7,14 +7,15 @@ const lat = "49.75";
 const lon = "6.64";
 const key = "496e909bd83237f140fdea7c6ff76865";
 
-const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${key}`;
+const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${key}`;
+const forcastURL = `https://api.openweathermap.org/data/2.5/forcast?lat=${lat}&lon=${lon}&units=imperial&appid=${key}`
 
-async function apiFetch() {
+async function apiFetch(url) {
     try {
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
-            console.log(data); // testing only
+            console.log(data);
             displayResults(data);
         } else {
             throw Error(await response.text());
@@ -24,7 +25,7 @@ async function apiFetch() {
     }
 };
 
-apiFetch();
+apiFetch(weatherURL);
 
 function displayResults(data) {
     currentTemp.innerHTML = `${data.main.temp}&deg;F`;
