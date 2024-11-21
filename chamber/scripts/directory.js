@@ -38,7 +38,7 @@ async function createBusinessCards() {
 
         card.innerHTML = `
             <p class="business-name">${business.name}</p>
-            <img class="business-image" src="images/${business.imageName}" alt="Image of ${business.name}">
+            <img class="business-image" src="images/${business.imageName}" alt="Image of ${business.name}" width=200>
             <p class="business-address">${business.address}</p>
             <p class="phone-number">${business.phoneNumber}</p>
             <a href="${business.url}" target="_blank">${business.url}</a>
