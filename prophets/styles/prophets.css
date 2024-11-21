@@ -1,0 +1,79 @@
+/* General reset and body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    background-color: #005f73;
+    color: white;
+    padding: 1em 0;
+    margin-bottom: 2em;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Main content styling */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 1em;
+}
+
+/* Card styling */
+section {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 340px;
+    text-align: center;
+    padding: 1em;
+    transition: transform 0.2s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.05);
+}
+
+/* Prophet details */
+section h2 {
+    font-size: 1.5rem;
+    color: #005f73;
+    margin: 0.5em 0;
+}
+
+section p {
+    font-size: 1rem;
+    margin: 0.5em 0;
+    color: #555;
+}
+
+/* Prophet portrait */
+section img {
+    border-radius: 8px;
+    margin-top: 1em;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #005f73;
+    color: white;
+    font-size: 0.9rem;
+}
