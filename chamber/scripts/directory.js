@@ -48,16 +48,11 @@ async function createBusinessCards() {
     });
 }
 
-// Hamburger menu
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburgerMenu = document.getElementById('hamburger-menu');
+function toggleMenu() {
     const navbar = document.getElementById('navbar');
+    navbar.classList.toggle('active');
+}
 
-    hamburgerMenu.addEventListener('click', () => {
-        // Toggle the 'active' class on the navbar
-        navbar.classList.toggle('active');
-    });
-});
 
 // Call the function to populate the cards after DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
