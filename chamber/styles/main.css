@@ -1,9 +1,8 @@
 :root {
     --primary-color: #F78764;
-    --secondary-color: #DA4167;
-    --accent-color: #083D77;
-    --accent-color-2: #F4D35E;
-    --background-color: #EBEBD3;
+    --secondary-color: #083D77;
+    --accent-color: #DA4167;
+    --background-color: #fdf0e8;
 }
 
 /* Header styling */
@@ -49,7 +48,7 @@ header nav a {
 }
 
 header nav a:hover {
-    color: var(--accent-color); /* Highlight color on hover */
+    color: var(--secondary-color); /* Highlight color on hover */
 }
 
 #navbar {
@@ -57,11 +56,11 @@ header nav a:hover {
 }
 
 #active {
-    border-bottom: 3px solid var(--accent-color); 
+    border-bottom: 3px solid var(--secondary-color); 
 }
 
 /* Hamburger menu for small screens */
-#hamburger-menu {
+#hamburger {
     display: none; /* Hidden by default */
     font-size: 24px;
     cursor: pointer;
@@ -118,28 +117,33 @@ footer p {
         align-items: stretch; /* Ensure full width for children */
     }
 
-    #hamburger-menu {
-        display: block; /* Show hamburger icon */
-        align-self: flex-end; /* Align icon to the right */
-        margin-top: -10px; /* Adjust spacing */
+    #hamburger {
+        display: block; /* Show hamburger button */
+        font-size: 24px;
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        margin: 10px 0; /* Adjust spacing */
+        align-self: flex-end; /* Align to the right */
     }
 
-    nav {
+    #navbar {
         display: none; /* Hidden by default */
         flex-direction: column;
         gap: 10px;
         background-color: var(--primary-color); /* Match header background */
         padding: 10px 20px;
-        border-top: 2px solid var(--accent-color); /* Add visual separation */
+        border-top: 2px solid var(--secondary-color); /* Add visual separation */
+    }
+
+    #navbar.active {
+        display: flex; /* Show navigation when active */
     }
 
     nav a {
         font-size: 14px; /* Slightly smaller font */
-        text-align: left; /* Align links to the left */
+        text-align: center; /* Align links to the left */
         padding: 5px 0; /* Add spacing */
-    }
-
-    nav.active {
-        display: flex; /* Show nav below header */
     }
 }
