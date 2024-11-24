@@ -4,7 +4,7 @@
         "address": "10 Market St, Timbuktu, Mali 999",
         "phoneNumber": "(223) 555-1234",
         "url": "http://www.timbuktutraders.com",
-        "imageName": "timbuktu-traders.jpg",
+        "imageName": "timbuktu-traders.png",
         "membershipLevel": 3
     },
     {
@@ -36,7 +36,7 @@
         "address": "3 Camel Rd, Timbuktu, Mali 999",
         "phoneNumber": "(223) 555-1122",
         "url": "http://www.nomadscoffee.com",
-        "imageName": "nomads-coffee.jpg",
+        "imageName": "nomads-coffee.png",
         "membershipLevel": 2
     },
     {
