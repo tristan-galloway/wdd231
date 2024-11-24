@@ -13,7 +13,8 @@
     <title>Timbuktu Chamber of Commerce | Home</title>
     <link rel="stylesheet" href="../styles/normalize.css">
     <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/directory.js" defer></script>
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="scripts/main.js" defer></script>
     <link rel="shortcut icon" href="images/timbuktu-favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -25,41 +26,37 @@
                 <h2>Chamber of Commerce</h2>
             </div>
         </div>
-        <div class="hamburger-menu" id="hamburger-menu">
-            &#9776; <!-- Hamburger icon -->
-        </div>
+        <button id="hamburger" onclick="toggleMenu()">☰</button>
         <nav id="navbar">
-            <a id="active"href="index.html">Home</a>
+            <a id="active" href="index.html">Home</a>
             <a href="directory.html">Directory</a>
             <a href="#">Join</a>
             <a href="#">Discover</a>
         </nav>
-    </header>
+    </header>    
     <main>
         <section id="hero">
-            <!-- Hero Img -->
-            <img src="" alt="">
-            <button>Keynote Tickets</button>
+            <img id="hero-img" src="images/timbuktu.jpg" alt="">
+            <a href="join.html">Join Today!</a>
         </section>
         <h3>Home</h3>
-        <section id="events-card">
-
-        </section>
-        <section id="weather-card">
-
-        </section>
-        <section id="weather-forcast-card">
-
-        </section>
-        <section id="business-card-container">
-            <div class="business-card">
-                <p>Business Name</p>
-                <p>Email: </p>
-                <p>Phone: </p>
-                <p>URL: </p>
-            </div>
-        </section>
-    </main>
+        <div class="card-row">
+            <section id="events-card" class="card">
+                <h4>Events</h4>
+            </section>
+            <section id="weather-card" class="card">
+            </section>
+            <section id="weather-forcast-card" class="card">
+                <h4>Weather Forecast</h4>
+                <p>Today: </p>
+                <p>Sunday: </p>
+                <p>Monday: </p>
+            </section>
+        </div>
+        <div class="business-card-row">
+            <!-- Cards will be dynamically inserted here -->
+        </div>        
+    </main>    
     <footer>
         <span id="footer-chamber-info">
             <p><strong>Tibuktu Chamber of Commerce</strong></p>
