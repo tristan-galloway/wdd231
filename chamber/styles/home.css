@@ -1,0 +1,128 @@
+:root {
+    --primary-color: #F78764;
+    --secondary-color: #083D77;
+    --accent-color: #DA4167;
+    --background-color: #fdf0e8;
+}
+
+/* Main Content */
+main {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.438);
+}
+
+#hero a {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+#hero a:hover {
+    background: var(--secondary-color);
+}
+
+/* Home Heading */
+h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 2em;
+}
+
+/* Card Layout */
+.card-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: nowrap; /* Ensures single row by default */
+    margin-bottom: 40px;
+}
+
+section.card {
+    flex: 0 0 calc(33% - 50px); /* Fixed card width with equal spacing */
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+section.card h4 {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+section.card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.business-card-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures the cards wrap on smaller screens */
+}
+
+.business-card {
+    flex: 1 1 calc(33% - 40px); /* Makes cards flexible with equal width */
+    background: #e9ecef;
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 200px; /* Ensures consistent size for smaller screens */
+}
+
+.business-name {
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+/* Media Query for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .card-row {
+        flex-wrap: wrap; /* Switch to wrapping for smaller screens */
+        justify-content: center; /* Center the cards */
+    }
+
+    section.card {
+        flex: 1 1 100%; /* Full width on small screens */
+        margin-bottom: 20px; /* Add spacing between cards */
+    }
+}
