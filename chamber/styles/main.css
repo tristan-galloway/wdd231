@@ -5,6 +5,14 @@
     --background-color: #fdf0e8;
 }
 
+body {
+    font-family: "Inter Tight", serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Poppins", serif;
+}
+
 /* Header styling */
 header {
     display: flex;
@@ -78,14 +86,17 @@ header nav a:hover {
     align-items: center; /* Align logo and headings */
 }
 
-
 footer {
     display: flex;
-    justify-content: space-between; /* Distributes spans evenly */
-    align-items: flex-start; /* Aligns content at the top */
-    padding: 20px;
-    background-color: #F78764; /* Adjust as needed */
-    font-family: Arial, sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+}
+
+footer section {
+    flex: 1;
+    margin: 0 1rem;
 }
 
 footer p {
@@ -97,6 +108,10 @@ footer p {
     display: flex;
     flex-direction: column; /* Stack content top to bottom */
     gap: 5px; /* Adds space between items */
+}
+
+#footer-student-info {
+    text-align: end;
 }
 
 #footer-links {
@@ -145,5 +160,20 @@ footer p {
         font-size: 14px; /* Slightly smaller font */
         text-align: center; /* Align links to the left */
         padding: 5px 0; /* Add spacing */
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: center;
+        justify-content: center;
+    }
+    
+    footer section {
+        margin: 10px auto;
+    }
+
+    #footer-student-info {
+        text-align: center;
     }
 }
