@@ -98,26 +98,33 @@ function toggleMenu() {
 function getCourses(subject) {
     const filteredCourses = subject === 'All' ? courses : courses.filter(course => course.subject === subject);
     const coursesContainer = document.getElementById('courses');
-    coursesContainer.innerHTML = '';
+    coursesContainer.innerHTML = '';  // Clear the container
 
     let totalCredits = 0;
-    
+
     filteredCourses.forEach(course => {
-        const courseElement = document.createElement('p');
-        let courseText = `${course.subject} ${course.number}`
+        const courseButton = document.createElement('button');  // Create a button instead of a p element
+        let courseText = `${course.subject} ${course.number}`;
         if (course.completed) {
-            courseText += ' ✓';
+            courseText += ' ✓';  // Add a check mark for completed courses
         }
-        courseElement.textContent = `${courseText}`;
-        coursesContainer.appendChild(courseElement);
+        courseButton.textContent = courseText;  // Set button text
+
+        // Optionally, add an event listener for button click (you can customize this further)
+        courseButton.addEventListener('click', () => {
+            alert(`You clicked on ${course.subject} ${course.number}`);
+        });
+
+        coursesContainer.appendChild(courseButton);  // Append the button to the container
 
         totalCredits += course.credits;
     });
 
     const totalCreditsElement = document.createElement('p');
     totalCreditsElement.textContent = `The total number of credits above is: ${totalCredits}`;
-    coursesContainer.appendChild(totalCreditsElement);
+    coursesContainer.appendChild(totalCreditsElement);  // Append total credits info
 }
+
 
 
 document.getElementById('all-button').addEventListener('click', () => {
