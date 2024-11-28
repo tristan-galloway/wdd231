@@ -33,8 +33,9 @@ main {
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--primary-color);
+    background: #4C1200;
     color: #fff;
+    font-weight: 600;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
