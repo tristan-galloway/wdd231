@@ -27,8 +27,8 @@
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background: #4C1200;
-    color: #fff;
+    background: var(--accent-color);
+    color:  black;
     font-weight: 600;
     border: none;
     border-radius: 5px;
