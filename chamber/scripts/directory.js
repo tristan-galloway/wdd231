@@ -27,10 +27,11 @@ async function fetchBusinessData() {
     }
 }
 
-// Function to create business cards dynamically
+// Function to create business cards dynamically (Grid View)
 async function createBusinessCards() {
     const businesses = await fetchBusinessData(); // Fetch the data
     const container = document.querySelector('.business-card-container');
+    container.innerHTML = ''; // Clear previous content
 
     businesses.forEach(business => {
         const card = document.createElement('div');
@@ -48,17 +49,55 @@ async function createBusinessCards() {
     });
 }
 
-function toggleMenu() {
-    const navbar = document.getElementById('navbar');
-    navbar.classList.toggle('active');
+// Function to create business lists dynamically (List View)
+async function createBusinessLists() {
+    const businesses = await fetchBusinessData(); // Fetch the data
+    const container = document.querySelector('.business-list-container');
+    container.innerHTML = ''; // Clear previous content
+
+    businesses.forEach(business => {
+        const list = document.createElement('div');
+        list.classList.add('business-list');
+
+        list.innerHTML = `
+            <p class="business-name">${business.name}</p>
+            <p class="business-address">${business.address}</p>
+            <p class="phone-number">${business.phoneNumber}</p>
+            <a href="${business.url}" target="_blank">${business.url}</a>
+        `;
+
+        container.appendChild(list);
+    });
 }
 
+// Toggle view between Grid and List
+function setupToggleButtons() {
+    const gridButton = document.getElementById('grid-button');
+    const listButton = document.getElementById('list-button');
+    const cardContainer = document.querySelector('.business-card-container');
+    const listContainer = document.querySelector('.business-list-container');
 
-// Call the function to populate the cards after DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
+    // Load grid view by default
     createBusinessCards();
-});
+    cardContainer.style.display = 'flex'; // Ensure grid container is visible
+    listContainer.style.display = 'none'; // Hide list container
+
+    // Event listener for Grid Button
+    gridButton.addEventListener('click', () => {
+        createBusinessCards(); // Create grid view
+        cardContainer.style.display = 'flex'; // Show grid container
+        listContainer.style.display = 'none'; // Hide list container
+    });
+
+    // Event listener for List Button
+    listButton.addEventListener('click', () => {
+        createBusinessLists(); // Create list view
+        cardContainer.style.display = 'none'; // Hide grid container
+        listContainer.style.display = 'block'; // Show list container
+    });
+}
 
 // Function Calls
 getLastModified();
 getCurrentYear();
+setupToggleButtons(); // Set up toggle buttons
