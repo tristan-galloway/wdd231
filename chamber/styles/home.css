@@ -84,6 +84,10 @@ section.card img {
     margin-bottom: 10px;
 }
 
+#weather-forecast-card p {
+    margin: 60px 0;
+}
+
 .business-card-row {
     display: flex;
     justify-content: center;
