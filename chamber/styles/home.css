@@ -113,6 +113,16 @@ section.card img {
     font-weight: 800;
 }
 
+.business-card a {
+    text-decoration: none;
+    color: #DA4167;
+}
+
+.business-card a:hover {
+    transform: scale(1.2); /* Scales the element 20% larger */
+    transition: transform 0.3s ease; /* Adds a smooth animation */
+}
+
 /* Media Query for Smaller Screens */
 @media screen and (max-width: 768px) {
     .card-row {

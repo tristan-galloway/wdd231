@@ -60,8 +60,8 @@ async function forecastFetch() {
 
 function displayWeather(data) {
     const desc = data.weather[0].description;
-    const high = data.main.temp_max;
-    const low = data.main.temp_min;
+    const high = Math.round(data.main.temp_max);
+    const low = Math.round(data.main.temp_min);
     const hum = data.main.humidity;
     const sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString(); // Convert timestamp to time
     const sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString(); // Convert timestamp to time
@@ -116,11 +116,11 @@ function displayForecast(data) {
     }
 
     // Destructure relevant data from the response
-    const todayTemp = data.list[0].main.temp;
+    const todayTemp = Math.round(data.list[0].main.temp);
     const tomorrow = formatDate(data.list[1].dt);
-    const tomorrowTemp = data.list[1].main.temp;
+    const tomorrowTemp = Math.round(data.list[1].main.temp);
     const twoDay = formatDate(data.list[9].dt);
-    const twoDayTemp = data.list[9].main.temp;
+    const twoDayTemp = Math.round(data.list[9].main.temp);
 
     // Get the Forecast card element
     const forecastElement = document.getElementById("weather-forecast-card");
