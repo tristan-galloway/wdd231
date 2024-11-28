@@ -26,15 +26,30 @@ const lon = "-3.00";
 const key = "632b64b71b2dc4a8bb1015a777025050";
 
 const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${key}`;
-const forcastURL = `https://api.openweathermap.org/data/2.5/forcast?lat=${lat}&lon=${lon}&units=imperial&appid=${key}`;
+const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${key}`;
 
-async function apiFetch(url) {
+async function weatherFetch(url) {
     try {
-        const response = await fetch(url);
+        const response = await fetch(weatherURL);
         if (response.ok) {
             const data = await response.json();
             console.log(data);
             displayWeather(data);
+        } else {
+            throw Error(await response.text());
+        }
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+async function forecastFetch() {
+    try {
+        const response = await fetch(forecastURL);
+        if (response.ok) {
+            const data = await response.json();
+            console.log(data);
+            displayForecast(data);
         } else {
             throw Error(await response.text());
         }
@@ -93,6 +108,35 @@ function displayWeather(data) {
     weatherCard.appendChild(sunsetTime);
 }
 
+function displayForecast(data) {
+    // Helper function to format a Unix timestamp into a readable date
+    function formatDate(timestamp) {
+        const date = new Date(timestamp * 1000); // Convert to milliseconds
+        return date.toLocaleDateString('en-US', { weekday: 'long'});
+    }
+
+    // Destructure relevant data from the response
+    const todayTemp = data.list[0].main.temp;
+    const tomorrow = formatDate(data.list[1].dt);
+    const tomorrowTemp = data.list[1].main.temp;
+    const twoDay = formatDate(data.list[9].dt);
+    const twoDayTemp = data.list[9].main.temp;
+
+    // Get the Forecast card element
+    const forecastElement = document.getElementById("weather-forecast-card");
+
+    // Create HTML for the forecast
+    const forecastHTML = `
+        <h4>Weather Forecast</h4>
+        <p>Today: ${todayTemp}°C</p>
+        <p>${tomorrow}: ${tomorrowTemp}°C</p>
+        <p>${twoDay}: ${twoDayTemp}°C</p>
+    `;
+
+    // Update the element's content
+    forecastElement.innerHTML = forecastHTML;
+}
+
 // Async function to fetch business data from JSON
 async function fetchBusinessData() {
     try {
@@ -148,4 +192,5 @@ async function createBusinessCards() {
 createBusinessCards();
 getLastModified();
 getCurrentYear();
-apiFetch(weatherURL);
+weatherFetch();
+forecastFetch();
