@@ -13,6 +13,14 @@ h1, h2, h3, h4 {
     font-family: "Poppins", serif;
 }
 
+/* Main Content */
+main {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-color);
+}
+
 /* Header styling */
 header {
     display: flex;
