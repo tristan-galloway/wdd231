@@ -12,6 +12,11 @@ function getCurrentYear(){
     currentYearElement.innerHTML = `&copy;${currentYear}`
 };
 
+function toggleMenu() {
+    const navbar = document.getElementById('navbar');
+    navbar.classList.toggle('active');
+}
+
 // Async function to fetch business data from JSON
 async function fetchBusinessData() {
     try {
@@ -96,6 +101,8 @@ function setupToggleButtons() {
         listContainer.style.display = 'block'; // Show list container
     });
 }
+
+
 
 // Function Calls
 getLastModified();
