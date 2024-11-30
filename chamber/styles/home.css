@@ -115,12 +115,11 @@ section.card img {
 
 .business-card a {
     text-decoration: none;
-    color: #DA4167;
+    color: #961032;
 }
 
 .business-card a:hover {
-    transform: scale(1.2); /* Scales the element 20% larger */
-    transition: transform 0.3s ease; /* Adds a smooth animation */
+    color: #4b0516;
 }
 
 /* Media Query for Smaller Screens */

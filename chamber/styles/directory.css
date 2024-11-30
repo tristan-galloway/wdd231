@@ -115,30 +115,13 @@
 /* Text styling */
 .business-name {
     font-weight: bold; /* Emphasize business name */
-    color: #333;
+    color: black;
 }
 
 .business-address, .phone-number, a {
     font-size: 14px;
-    color: #555;
+    color: black;
     text-decoration: none;
-}
-
-/* Link hover effect */
-.business-list a:hover {
-    text-decoration: underline;
-    color: var(--accent-color);
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 600px) {
-    .business-list {
-        grid-template-columns: 1fr; /* Stack items vertically */
-        text-align: center; /* Center align text */
-    }
-    .business-list p, .business-list a {
-        margin: 5px 0;
-    }
 }
 
 .business-name {
@@ -150,7 +133,7 @@
 
 .business-address, .email {
     font-size: 14px;
-    color: #666; /* Slightly lighter text for secondary information */
+    color: black; /* Slightly lighter text for secondary information */
     margin: 5px 0;
 }
 
@@ -159,10 +142,21 @@
     margin-top: 10px; /* Space above the link */
     text-decoration: none; /* Remove underline */
     font-size: 15px;
-    color: #bf2249; /* Blue link color */
+    color: #961032;
     transition: color 0.3s ease; /* Smooth hover effect */
 }
 
 .business-card a:hover {
-    color: #8c0f2e; /* Darker blue on hover */
+    color: #4b0516; /* Darker blue on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .business-list {
+        grid-template-columns: 1fr; /* Stack items vertically */
+        text-align: center; /* Center align text */
+    }
+    .business-list p, .business-list a {
+        margin: 5px 0;
+    }
 }
