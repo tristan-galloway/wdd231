@@ -80,7 +80,7 @@ header nav a:hover {
     display: none; /* Hidden by default */
     font-size: 24px;
     cursor: pointer;
-    color: #333;
+    color: black;
 }
 
 /* Group the logo and headings */
@@ -145,7 +145,7 @@ footer p {
         font-size: 24px;
         background: none;
         border: none;
-        color: #fff;
+        color: black;
         cursor: pointer;
         margin: 10px 0; /* Adjust spacing */
         align-self: flex-end; /* Align to the right */
