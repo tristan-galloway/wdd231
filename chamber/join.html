@@ -10,11 +10,11 @@
     <meta property="og:type" content="website">
     <meta property="image" content="tbd">
     <meta property="url" content="tbd">
-    <title>Timbuktu Chamber of Commerce | Home</title>
+    <title>Timbuktu Chamber of Commerce | Join</title>
     <link rel="stylesheet" href="../styles/normalize.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="join.css">
-    <script src="scripts/main.js" defer></script>
+    <link rel="stylesheet" href="styles/main.css" defer>
+    <link rel="stylesheet" href="styles/join.css" defer>
+    <script src="scripts/join.js" defer></script>
     <link rel="shortcut icon" href="images/timbuktu-favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,8 +37,142 @@
             <a href="#">Discover</a>
         </nav>
     </header>    
-    <main>        
-    </main>    
+    <main>
+        <div id="membership-container">
+            <form action="thankyou.html" method="get" id="membership-form">
+                <h2>Join the Timbuktu Chamber of Commerce!</h2>
+    
+                <label for="first-name">
+                    First Name
+                    <input type="text" id="first-name" name="firstName" title="Enter your first name" autocomplete="given-name" required>
+                </label>
+    
+                <label for="last-name">
+                    Last Name
+                    <input type="text" id="last-name" name="lastName" title="Enter your last name" autocomplete="family-name" required>
+                </label>
+    
+                <label for="org-title">
+                    Organizational Title
+                    <input type="text" id="org-title" name="orgTitle" title="Enter your organizational title" autocomplete="organization-title" pattern="[a-zA-Z\s-]{7,}" required>
+                </label>
+    
+                <label for="email">
+                    Email Address
+                    <input type="email" id="email" name="email" title="Enter your email address" autocomplete="email" placeholder="example@domain.com" required>
+                </label>
+    
+                <label for="mobile">
+                    Mobile Phone Number
+                    <input type="tel" id="mobile" name="mobile" title="Enter your mobile phone number" autocomplete="tel" required>
+                </label>
+    
+                <label for="organization">
+                    Business/Organization Name
+                    <input type="text" id="organization" name="organization" title="Enter your organization's name" autocomplete="organization" required>
+                </label>
+    
+                <label for="membership-level">
+                    Membership Level
+                    <select id="membership-level" name="membershipLevel" title="Select your membership level" required>
+                        <option value="NP">Nonprofit Membership</option>
+                        <option value="Bronze">Bronze Membership</option>
+                        <option value="Silver">Silver Membership</option>
+                        <option value="Gold">Gold Membership</option>
+                    </select>
+                </label>
+    
+                <label for="description">
+                    Business/Organization Description
+                    <textarea id="description" name="description" title="Describe your business or organization"></textarea>
+                </label>
+    
+                <input type="hidden" name="timestamp" id="timestamp" value="">
+                <input type="submit" value="Submit Membership Application">
+            </form>
+    
+            <section id="membership-cards">
+                <div class="membership-card" id="np-card">
+                    <h3>Nonprofit Membership</h3>
+                    <p>No fees for non-profit organizations.</p>
+                    <button onclick="showModal('np-modal')">Learn More</button>
+                </div>
+                <div class="membership-card" id="bronze-card">
+                    <h3>Bronze Membership</h3>
+                    <p>Basic benefits at a minimal fee.</p>
+                    <button onclick="showModal('bronze-modal')">Learn More</button>
+                </div>
+                <div class="membership-card" id="silver-card">
+                    <h3>Silver Membership</h3>
+                    <p>Additional benefits and discounts.</p>
+                    <button onclick="showModal('silver-modal')">Learn More</button>
+                </div>
+                <div class="membership-card" id="gold-card">
+                    <h3>Gold Membership</h3>
+                    <p>Premium benefits and services.</p>
+                    <button onclick="showModal('gold-modal')">Learn More</button>
+                </div>
+            </section>
+    
+            <!-- Nonprofit Membership Modal -->
+            <div id="np-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="hideModal('np-modal')">&times;</span>
+                    <h3>Nonprofit Membership</h3>
+                    <p>This membership is specifically designed for nonprofit organizations. Benefits include:</p>
+                    <ul>
+                        <li>Free membership with no fees.</li>
+                        <li>Access to networking events.</li>
+                        <li>Exclusive resources for nonprofits.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bronze Membership Modal -->
+            <div id="bronze-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="hideModal('bronze-modal')">&times;</span>
+                    <h3>Bronze Membership</h3>
+                    <p>The Bronze membership offers great value with the following benefits:</p>
+                    <ul>
+                        <li>Access to networking events.</li>
+                        <li>Business directory listing.</li>
+                        <li>Discounts on select chamber-hosted events.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Silver Membership Modal -->
+            <div id="silver-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="hideModal('silver-modal')">&times;</span>
+                    <h3>Silver Membership</h3>
+                    <p>The Silver membership is ideal for businesses looking to expand their reach. Benefits include:</p>
+                    <ul>
+                        <li>All Bronze membership benefits.</li>
+                        <li>Priority listing in the business directory.</li>
+                        <li>Advertising opportunities on the chamber's website.</li>
+                        <li>Exclusive training and workshops.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Gold Membership Modal -->
+            <div id="gold-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="hideModal('gold-modal')">&times;</span>
+                    <h3>Gold Membership</h3>
+                    <p>The Gold membership provides the highest level of benefits, including:</p>
+                    <ul>
+                        <li>All Silver membership benefits.</li>
+                        <li>Spotlight position on the chamber's homepage.</li>
+                        <li>Free admission to all chamber-hosted events.</li>
+                        <li>Customized advertising packages.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>       
     <footer>
         <section id="footer-chamber-info">
             <p><strong>Tibuktu Chamber of Commerce</strong></p>
