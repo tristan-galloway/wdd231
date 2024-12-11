@@ -1,3 +1,5 @@
+// Shared functions
+
 // Get the last modified date for the footer
 function getLastModified(){
     const lastModified = document.lastModified;
@@ -189,8 +191,12 @@ async function createBusinessCards() {
 }
 
 // Function Calls
-createBusinessCards();
-getLastModified();
-getCurrentYear();
-weatherFetch();
-forecastFetch();
+function main() {
+    createBusinessCards();
+    getLastModified();
+    getCurrentYear();
+    weatherFetch();
+    forecastFetch();
+}
+
+main();
