@@ -30,7 +30,7 @@ const key = "632b64b71b2dc4a8bb1015a777025050";
 const weatherURL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${key}`;
 const forecastURL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${key}`;
 
-async function weatherFetch(url) {
+async function weatherFetch() {
     try {
         const response = await fetch(weatherURL);
         if (response.ok) {
