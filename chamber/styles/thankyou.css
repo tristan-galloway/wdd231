@@ -1,0 +1,45 @@
+:root {
+    --primary-color: #F78764;
+    --secondary-color: #083D77;
+    --accent-color: #DA4167;
+    --background-color: #fdf0e8;
+}
+
+/* Basic styles for the thank you page */
+.container {
+    max-width: 800px;
+    margin: 2em auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#form-details {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+}
+
+#form-details p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #353535;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: var(--accent-color);
+    color: black;
+}
