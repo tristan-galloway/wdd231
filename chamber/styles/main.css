@@ -16,6 +16,7 @@ h1, h2, h3, h4 {
 /* Main Content */
 main {
     max-width: 1800px;
+    min-height: 962px;
     margin: 0 auto;
     padding: 20px;
     background-color: var(--background-color);
@@ -60,6 +61,7 @@ header nav a {
     text-decoration: none; /* Remove underline */
     color: #000; /* Set link color */
     font-size: 16px;
+    font-weight: bold;
     transition: color 0.3s ease; /* Smooth hover effect */
 }
 
