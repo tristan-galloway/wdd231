@@ -34,7 +34,6 @@
                 <h2>Chamber of Commerce</h2>
             </div>
         </div>
-        <button id="hamburger" onclick="toggleMenu()">&equiv;</button>
         <nav id="navbar">
             <a href="index.html">Home</a>
             <a href="directory.html">Directory</a>
@@ -43,7 +42,33 @@
         </nav>
     </header>    
     <main>
-    </main>       
+        <div class="layout">
+            <aside class="sidebar">
+                <div class="aside-card">
+                    <h3 id="visitor-message"></h3>
+                </div>
+                <section class="aside-card">
+                    <h3>Upcoming Events</h3>
+                    <ul id="event-list">
+                        <!-- Content dynamically loaded from JSON -->
+                    </ul>
+                </section>
+                <section class="aside-card">
+                    <h3>Filter by Date</h3>
+                    <div id="calendar-container">
+                        <!-- Content dynamically created -->
+                    </div>
+                    <button id="clear-selection">Clear Selection</button>
+                </section>        
+            </aside>                        
+            <section class="gallery">
+                <h2>Local Attractions</h2>
+                <div class="image-container" id="attractions-container">
+                    <!-- Content dynamically loaded from JSON -->
+                </div>
+            </section>
+        </div>
+    </main>     
     <footer>
         <section id="footer-chamber-info">
             <p><strong>Tibuktu Chamber of Commerce</strong></p>

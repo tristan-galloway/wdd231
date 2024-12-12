@@ -1,0 +1,273 @@
+main {
+    min-height: 1600px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sidebar styles */
+.sidebar {
+    padding: 15px;
+}
+
+/* General styling for aside cards */
+.aside-card {
+    background-color: #ffffff;
+    margin-bottom: 16px;
+    padding: 16px;
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.2s, box-shadow 0.2s; 
+}
+
+/* Hover effect for aside cards */
+.aside-card:hover {
+    transform: translateY(-4px); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /
+}
+
+/* Styling for headings inside aside cards */
+.aside-card h3 {
+    align-self: center;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 12px;
+}
+
+/* Styling for unordered lists inside aside cards */
+.aside-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.aside-card li {
+    margin-bottom: 8px;
+    color: black;
+}
+
+/* Calendar container inside aside cards */
+.aside-card #calendar-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* Clear selection button (already defined) */
+#clear-selection {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#clear-selection:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+#clear-selection:active {
+    background-color: var(--accent-color);
+    transform: translateY(0);
+}
+
+/* Calendar and days section styles */
+#calendar-container {
+    margin: 0 auto;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+/* Calendar grid setup */
+.calendar-header {
+    display: flex;
+    justify-content: center; /* Center all items in the header */
+    align-items: center; /* Align items vertically */
+    gap: 40px; /* Optional: Add spacing between items */
+    margin-bottom: 10px;
+}
+
+.calendar-header button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.calendar-header button:hover {
+    background-color: var(--accent-color);
+    color: black;
+}
+
+.calendar-header span {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.days-row, .days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+
+.days-row div {
+    font-weight: bold;
+}
+
+.day-cell {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.day-cell:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.day-cell[data-date] {
+    font-weight: bold;
+}
+
+/* Gallery styles */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    justify-items: center;
+}
+
+/* General styles for event cards */
+.event-card {
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+}
+
+/* Styling for the image container */
+.event-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    background-color: #a0a0a0;
+    border-radius: 8px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Lazy images initially */
+.event-image.lazy {
+    opacity: 0;
+}
+
+/* Images that have loaded */
+.event-image:not(.lazy) {
+    opacity: 1;
+}
+
+/* Hover effect for images */
+.event-image:hover {
+    transform: scale(1.05);
+}
+
+/* Title of the event */
+.event-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+    color: var(--secondary-color);
+}
+
+/* Date of the event */
+.event-date {
+    font-size: 0.9em;
+    color: black;
+    margin: 5px 0;
+}
+
+/* Description of the event */
+.event-description {
+    font-size: 1em;
+    color: black;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    /* Stack the layout into a single column */
+    .layout {
+        display: block; /* Change from grid to block for single-column layout */
+    }
+
+    /* Stack the sidebar and gallery vertically */
+    .sidebar {
+        margin-bottom: 20px; /* Add space below sidebar */
+    }
+
+    .gallery {
+        margin-top: 20px; /* Add space above gallery */
+    }
+
+    /* Adjust the image container to take full width */
+    .image-container {
+        grid-template-columns: 1fr; /* Display all images in a single column */
+        gap: 15px;
+    }
+
+    /* Ensure event cards display full width in a single column */
+    .event-card {
+        width: 100%; /* Ensure cards are displayed full width */
+        margin: 10px 0; /* Add vertical margin between cards */
+    }
+
+    /* Prevent hover scale effect on mobile for images */
+    .event-image:hover {
+        transform: none;
+    }
+
+    /* Adjust card layout */
+    .aside-card {
+        width: 100%; /* Make the sidebar cards full width */
+    }
+
+    /* Calendar container should also stack vertically */
+    #calendar-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #clear-selection {
+        width: 100%; /* Make the button span the full width of the container */
+    }
+}

@@ -1,0 +1,52 @@
+{
+  "events": [
+    {
+      "title": "Cultural Festival",
+      "description": "Experience the vibrant cultural heritage of our city.",
+      "date": "12-15-24",
+      "imageUrl": "images/festival.webp"
+    },
+    {
+      "title": "Art Expo",
+      "description": "Discover stunning artwork by local artists.",
+      "date": "12-20-24",
+      "imageUrl": "images/art.jpg"
+    },
+    {
+      "title": "Music Night",
+      "description": "Enjoy live performances by talented musicians.",
+      "date": "12-25-24",
+      "imageUrl": "images/music.jpg"
+    },
+    {
+      "title": "Food Fest",
+      "description": "Taste culinary delights from around the world.",
+      "date": "01-05-25",
+      "imageUrl": "images/food.jpg"
+    },
+    {
+      "title": "Science Fair",
+      "description": "Explore groundbreaking innovations in science.",
+      "date": "01-15-25",
+      "imageUrl": "images/science.jpg"
+    },
+    {
+      "title": "Literary Meetup",
+      "description": "Engage with authors and literature enthusiasts.",
+      "date": "01-25-25",
+      "imageUrl": "images/library.jpg"
+    },
+    {
+      "title": "Tech Summit",
+      "description": "Dive into the latest technology trends.",
+      "date": "02-10-25",
+      "imageUrl": "images/tech.jpg"
+    },
+    {
+      "title": "Film Festival",
+      "description": "Celebrate cinematic masterpieces.",
+      "date": "02-20-25",
+      "imageUrl": "images/film.jpg"
+    }
+  ]
+}

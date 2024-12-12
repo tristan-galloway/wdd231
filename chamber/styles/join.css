@@ -88,7 +88,7 @@ main {
 
 /* Submit button hover effect */
 #membership-form input[type="submit"]:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--accent-color);
 }
 
 #membership-form textarea {
