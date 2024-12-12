@@ -30,7 +30,7 @@ main {
 /* Hover effect for aside cards */
 .aside-card:hover {
     transform: translateY(-4px); 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Styling for headings inside aside cards */
