@@ -59,7 +59,7 @@
     
                 <label for="org-title">
                     Organizational Title
-                    <input type="text" id="org-title" name="orgTitle" title="Enter your organizational title" autocomplete="organization-title" pattern="[a-zA-Z\s-]{7,}" required>
+                    <input type="text" id="org-title" name="orgTitle" title="Enter your organizational title" autocomplete="organization-title" pattern="^(?=.*[a-zA-Z])[a-zA-Z\s-]{7,}$" required>
                 </label>
     
                 <label for="email">
