@@ -85,9 +85,10 @@ function displayEventCard(event, container) {
     figure.classList.add('event-card');
 
     const img = document.createElement('img');
-    img.setAttribute('data-src', event.imageUrl); // Use data-src for lazy loading
+    img.setAttribute('src', event.imageUrl); // Set the source for the image
     img.setAttribute('alt', event.title);
-    img.classList.add('event-image', 'lazy'); // Add lazy class
+    img.setAttribute('loading', 'lazy'); // Native lazy loading
+    img.classList.add('event-image'); // No need for 'lazy' class anymore
 
     const title = document.createElement('h3');
     title.textContent = event.title;
@@ -108,6 +109,7 @@ function displayEventCard(event, container) {
     container.appendChild(figure);
 }
 
+// Generate filtered cards
 function filterEventsByDate(selectedDate) {
     fetch('./data/events.json')
         .then(response => response.json())
@@ -122,12 +124,11 @@ function filterEventsByDate(selectedDate) {
             } else {
                 container.innerHTML = '<p>No events found for this date.</p>';
             }
-
-            initializeLazyLoading(); // Initialize lazy loading for newly added images
         })
         .catch(error => console.error('Error loading events:', error));
 }
 
+// Generate all cards
 function showAllEvents() {
     fetch('./data/events.json')
         .then(response => response.json())
@@ -136,11 +137,10 @@ function showAllEvents() {
             container.innerHTML = ''; // Clear previous events
 
             data.events.forEach(event => displayEventCard(event, container));
-
-            initializeLazyLoading(); // Initialize lazy loading for newly added images
         })
         .catch(error => console.error('Error loading events:', error));
 }
+
 
 // Generate calendar function
 function generateCalendar(year, month) {
@@ -212,30 +212,12 @@ function generateCalendar(year, month) {
     });
 }
 
-function initializeLazyLoading() {
-    const lazyImages = document.querySelectorAll('.lazy');
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src; // Set the src from data-src
-                img.classList.remove('lazy');
-                observer.unobserve(img);
-            }
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    lazyImages.forEach(image => observer.observe(image));
-}
-
 // Add event listener for "Clear Selection" button
 document.getElementById('clear-selection').addEventListener('click', () => {
     showAllEvents();
 });
 
-// Initialization
+// Initialize calendar
 generateCalendar(new Date().getFullYear(), new Date().getMonth());
 showAllEvents();
 getCurrentYear();

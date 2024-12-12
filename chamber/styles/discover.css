@@ -186,16 +186,6 @@ main {
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Lazy images initially */
-.event-image.lazy {
-    opacity: 0;
-}
-
-/* Images that have loaded */
-.event-image:not(.lazy) {
-    opacity: 1;
-}
-
 /* Hover effect for images */
 .event-image:hover {
     transform: scale(1.05);
